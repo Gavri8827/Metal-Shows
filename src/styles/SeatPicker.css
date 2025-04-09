@@ -1,0 +1,26 @@
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 6px;
+  justify-content: center;
+}
+
+.seat {
+  height: 40px;
+  background: lightgray;
+  border-radius: 4px;
+  line-height: 40px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.seat.reserved {
+  background: red;
+  color: white;
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background: green;
+  color: white;
+}
