@@ -1,0 +1,46 @@
+.track-orders-container {
+    padding: 2rem;
+  }
+  
+  .track-orders-container h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .track-orders-container p {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .reservations-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+  }
+  
+  .reservations-table thead {
+    background-color: #a32cc4; /* deep purple */
+    color: #fff;
+  }
+  
+  .reservations-table th,
+  .reservations-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .reservations-table tbody tr:nth-child(odd) {
+    background-color: #f6ecf9;
+  }
+  
+  .reservations-table tbody tr:nth-child(even) {
+    background-color: #f3e6f7;
+  }
+  
+  .reservations-table .no-data {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+  }
+  
