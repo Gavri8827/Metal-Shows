@@ -36,7 +36,8 @@ Update the application.properties file with your database configuration (MySQL).
    cd frontend
    npm install
    Run the React app:
-   npm start'''
+   npm start
+   '''
    The app will be available at: http://localhost:3000
 
 ## **🛠 Tech Stack**
