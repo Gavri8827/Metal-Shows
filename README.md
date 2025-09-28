@@ -34,7 +34,7 @@ Update the application.properties file with your database configuration (MySQL).
    Run the React app:
    npm start
    Navigate to the frontend folder.
-   cd client
+   cd frontend
    npm install
    Run the React app:
    npm start'''
