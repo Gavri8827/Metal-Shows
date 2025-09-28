@@ -28,7 +28,6 @@ Update the application.properties file with your database configuration (MySQL).
 4. Frontend (React)
    ```bash
    Install dependencies:
-   ```bash
    npm insatll
    ```
    Run the React app:
