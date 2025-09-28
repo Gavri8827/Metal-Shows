@@ -25,7 +25,8 @@ Update the application.properties file with your database configuration (MySQL).
    ```
    The API will be available at: http://localhost:8081/api
    
-4. Frontend (React)
+4. Frontend (React):
+   Navigate to the frontend folder.
    ```bash
    Install dependencies:
    npm insatll
@@ -35,17 +36,6 @@ Update the application.properties file with your database configuration (MySQL).
    cd client
    npm install
    ```
-
-
-
-Frontend (React)
-
-Navigate to the frontend folder.
-```bash
-Install dependencies:
-
-npm install'''
-
 ```bash
 Run the React app:
 
