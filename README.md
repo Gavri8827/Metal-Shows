@@ -1,9 +1,11 @@
 **Metal Shows 🎸**
+
 Metal Shows is a Full-Stack web application for managing and booking metal concerts.
 The project includes a React frontend and a Spring Boot backend with JPA and database integration (MySQL).
 It allows users to view upcoming shows, reserve tickets, manage halls and seating, and provides an admin panel to add or update shows.
 
 🚀 Getting Started
+
 ## Installation
 
 ### Prerequisites
@@ -41,12 +43,31 @@ Run the React app:
 
 npm start'''
 
-
 The app will be available at: http://localhost:3000
 
 GitHub Pages
 
 The frontend is also deployed via GitHub Pages.
+
+**🛠 Tech Stack**
+
+Frontend: React, React Router, CSS
+
+Backend: Spring Boot, REST API, JPA
+
+Database: MySQL 
+
+Deployment: GitHub Pages (Frontend)
+
+**Features**
+
+🎶 Browse and view upcoming metal shows
+
+🎫 Reserve tickets online
+
+🏟 Manage halls and seating layouts
+
+👩‍💻 Admin panel for creating and updating shows
 
 
 
