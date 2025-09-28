@@ -27,7 +27,7 @@ Update the application.properties file with your database configuration (MySQL).
    BackendMetalShowsApplication
    
    ```bash
-     in the location: backend/src/main-/java/com…/BackendMetalShowsApplication
+     the location: backend/src/main-/java/com…/BackendMetalShowsApplication
      run
    ```
    The API will be available at: http://localhost:8081/api
