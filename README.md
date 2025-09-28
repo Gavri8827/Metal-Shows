@@ -5,9 +5,9 @@ It allows users to view upcoming shows, reserve tickets, manage halls and seatin
 
 🚀 Getting Started
 
-```bash
+bash
 git clone https://github.com/Gavri8827/Metal-Shows.git
-cd Metal-Shows
+cd Metal-Shows'''
 
 
 Backend (Spring Boot)
