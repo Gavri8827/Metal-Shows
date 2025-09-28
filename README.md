@@ -5,8 +5,10 @@ It allows users to view upcoming shows, reserve tickets, manage halls and seatin
 
 🚀 Getting Started
 
-Clone the repository to your local machine:
-<pre> ```bash git clone https://github.com/Gavri8827/Metal-Shows.git cd Metal-Shows ``` </pre
+```bash
+git clone https://github.com/Gavri8827/Metal-Shows.git
+cd Metal-Shows
+
 
 Backend (Spring Boot)
 
@@ -17,7 +19,7 @@ Make sure you have Java 17+ and Maven installed.
 Update the application.properties file with your database configuration (MySQL or SQLite).
 
 Run the server:
-
+```bash
 mvn spring-boot:run
 
 
