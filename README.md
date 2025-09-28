@@ -8,6 +8,7 @@ It allows users to view upcoming shows, reserve tickets, manage halls and seatin
 
 ### Prerequisites
 Make sure you have Java 17+ installed.
+
 Update the application.properties file with your database configuration (MySQL).
 
 ### Setup Instructions
