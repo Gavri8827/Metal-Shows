@@ -28,15 +28,15 @@ Update the application.properties file with your database configuration (MySQL).
 5. Frontend (React):
    Navigate to the frontend folder.
    ```bash
-   Install dependencies:
-   npm insatll
-   Run the React app:
-   npm start
-   Navigate to the frontend folder.
-   cd frontend
-   npm install
-   Run the React app:
-   npm start
+      Install dependencies:
+      npm insatll
+      Run the React app:
+      npm start
+      Navigate to the frontend folder.
+      cd frontend
+      npm install
+      Run the React app:
+      npm start
    '''
    The app will be available at: http://localhost:3000
 
