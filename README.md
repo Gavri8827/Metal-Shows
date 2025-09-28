@@ -38,7 +38,7 @@ Update the application.properties file with your database configuration (MySQL).
    npm start'''
    The app will be available at: http://localhost:3000
 
-# **🛠 Tech Stack**
+## **🛠 Tech Stack**
 
    **Frontend:** React, React Router, CSS
 
@@ -48,7 +48,7 @@ Update the application.properties file with your database configuration (MySQL).
 
    **Deployment:** GitHub Pages (Frontend)
 
-# **Features**
+## **Features**
 
    🎶 Browse and view upcoming metal shows
 
