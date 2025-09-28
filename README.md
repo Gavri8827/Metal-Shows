@@ -24,19 +24,20 @@ Update the application.properties file with your database configuration (MySQL).
    mvn spring-boot:run
    ```
    The API will be available at: http://localhost:8081/api
-3. Frontend (React)
+   
+4. Frontend (React)
    ```bash
    Install dependencies:
-   npm install'''
    ```bash
+   npm insatll
+   ```
    Run the React app:
-
-   npm start'''
+   '''bash
+   npm start
    Navigate to the frontend folder.
-     ```bash
-     cd client
-     npm install
-     ```
+   cd client
+   npm install
+   ```
 
 
 
