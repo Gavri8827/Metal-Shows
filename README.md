@@ -19,10 +19,11 @@ Update the application.properties file with your database configuration (MySQL).
 2. Install dependencies:
    Backend (Spring Boot)
    Navigate to the backend folder.
-  Run the server:
-  ```bash
-  mvn spring-boot:run
-   '''
+   Run the server:
+   ```bash
+   mvn spring-boot:run
+   ```
+3. 
 
 The API will be available at: http://localhost:8081/api
    - For the client:
