@@ -20,14 +20,15 @@ Update the application.properties file with your database configuration (MySQL).
    ```
 2. Install dependencies:
    Backend (Spring Boot)
-   Navigate to the backend folder.
-   Run the server:
+   Open Up the file:
+   BackendMetalShowsApplication
+   in the location: backend/src/main-/java/com…/BackendMetalShowsApplication
    ```bash
-   mvn spring-boot:run
+     run
    ```
    The API will be available at: http://localhost:8081/api
    
-3. Frontend (React):
+4. Frontend (React):
    Navigate to the frontend folder.
    ```bash
    Install dependencies:
@@ -37,14 +38,9 @@ Update the application.properties file with your database configuration (MySQL).
    Navigate to the frontend folder.
    cd client
    npm install
-Run the React app:
-npm start'''
-
-The app will be available at: http://localhost:3000
-
-GitHub Pages
-
-The frontend is also deployed via GitHub Pages.
+   Run the React app:
+   npm start'''
+   The app will be available at: http://localhost:3000
 
 **🛠 Tech Stack**
 
