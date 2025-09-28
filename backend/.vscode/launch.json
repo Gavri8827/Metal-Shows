@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BackendMetalShowsApplication<backend_metal_shows>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.gabrielam.backend_metal_shows.BackendMetalShowsApplication",
+            "projectName": "backend_metal_shows",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

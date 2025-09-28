@@ -1,0 +1,5 @@
+com\gabrielam\backend_metal_shows\BackendMetalShowsApplication.class
+com\gabrielam\backend_metal_shows\model\Hall.class
+com\gabrielam\backend_metal_shows\model\Reservation.class
+com\gabrielam\backend_metal_shows\model\Seat.class
+com\gabrielam\backend_metal_shows\model\Show.class

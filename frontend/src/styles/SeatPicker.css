@@ -1,0 +1,72 @@
+.seat-grid {
+  display: grid;
+  gap: 6px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background: lightgray;
+  border: 1px solid #444;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.row-label {
+  width: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+  text-align: right;
+}
+
+
+.seat.reserved {
+  background: red;
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background: green;
+  color: white;
+  font-weight: bold;
+}
+
+.legend {
+  margin: 10px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.dot.available { background: lightgray; }
+.dot.reserved { background: red; }
+.dot.selected { background: green; }
+
+.stage {
+  text-align: center;
+  margin: 15px auto;
+  font-weight: bold;
+  padding: 5px;
+  background: #eee;
+  width: 120px;
+  border-radius: 6px;
+}

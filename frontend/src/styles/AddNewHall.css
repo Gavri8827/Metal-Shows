@@ -1,0 +1,57 @@
+.add-hall-container {
+    padding: 2rem;
+  }
+  
+  .add-hall-container h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .add-hall-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #c065d4, #a32cc4);
+    padding: 2rem;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
+  .add-hall-form label {
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  .add-hall-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.4rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background: #fff;
+    color: #333;
+  }
+  
+  .add-hall-form button {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 1.5rem;
+    background: #8d1a9a;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .add-hall-form button:hover {
+    background: #75157d;
+  }
+  
+  .message {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffeb3b;
+  }
+  

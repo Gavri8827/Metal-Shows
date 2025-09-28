@@ -1,0 +1,46 @@
+.search-bar {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* חשוב למסכים קטנים */
+    margin-bottom: 30px;
+  }
+  .shows-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+  .filter-bar {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+
+.search-box input,
+.filter-bar select,
+.date-box input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.apply-dates {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.apply-dates:hover {
+  background-color: #e65c00;
+}
+
+  
