@@ -18,16 +18,10 @@ Update the application.properties file with your database configuration (MySQL).
    git clone https://github.com/Gavri8827/Metal-Shows.git
    cd Metal-Shows
    ```
-2. Install dependencies:
-3. 
-   Backend (Spring Boot)
-   
-   Open Up the file:
-   
-   BackendMetalShowsApplication
-   
+2. Backend (Spring Boot)
    ```bash
-     the location: backend/src/main-/java/com…/BackendMetalShowsApplication
+     the location: backend/src/main-/java/com…
+     BackendMetalShowsApplication
      run
    ```
    The API will be available at: http://localhost:8081/api
