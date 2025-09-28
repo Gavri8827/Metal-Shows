@@ -23,9 +23,10 @@ Update the application.properties file with your database configuration (MySQL).
    ```bash
    mvn spring-boot:run
    ```
+   The API will be available at: http://localhost:8081/api
 3. 
 
-The API will be available at: http://localhost:8081/api
+
    - For the client:
      ```bash
      cd client
