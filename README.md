@@ -19,16 +19,21 @@ Update the application.properties file with your database configuration (MySQL).
    cd Metal-Shows
    ```
 2. Install dependencies:
+3. 
    Backend (Spring Boot)
+   
    Open Up the file:
+   
    BackendMetalShowsApplication
+   
    in the location: backend/src/main-/java/com…/BackendMetalShowsApplication
+   
    ```bash
      run
    ```
    The API will be available at: http://localhost:8081/api
    
-4. Frontend (React):
+5. Frontend (React):
    Navigate to the frontend folder.
    ```bash
    Install dependencies:
