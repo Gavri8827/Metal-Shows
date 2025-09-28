@@ -42,23 +42,23 @@ Update the application.properties file with your database configuration (MySQL).
 
 **🛠 Tech Stack**
 
-Frontend: React, React Router, CSS
+   **Frontend:** React, React Router, CSS
 
-Backend: Spring Boot, REST API, JPA
+   **Backend:** Spring Boot, REST API, JPA
 
-Database: MySQL 
+   **Database:** MySQL 
 
-Deployment: GitHub Pages (Frontend)
+   **Deployment:** GitHub Pages (Frontend)
 
 **Features**
 
-🎶 Browse and view upcoming metal shows
+   🎶 Browse and view upcoming metal shows
 
-🎫 Reserve tickets online
+   🎫 Reserve tickets online
 
-🏟 Manage halls and seating layouts
+   🏟 Manage halls and seating layouts
 
-👩‍💻 Admin panel for creating and updating shows
+   👩‍💻 Admin panel for creating and updating shows
 
 
 
