@@ -29,9 +29,7 @@ Update the application.properties file with your database configuration (MySQL).
    ```bash
    Install dependencies:
    npm insatll
-   ```
    Run the React app:
-   '''bash
    npm start
    Navigate to the frontend folder.
    cd client
