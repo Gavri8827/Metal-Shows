@@ -6,9 +6,7 @@ It allows users to view upcoming shows, reserve tickets, manage halls and seatin
 🚀 Getting Started
 
 Clone the repository to your local machine:
-```bash
-git clone https://github.com/Gavri8827/Metal-Shows.git
-cd Metal-Shows
+<pre> ```bash git clone https://github.com/Gavri8827/Metal-Shows.git cd Metal-Shows ``` </pre
 
 Backend (Spring Boot)
 
