@@ -74,10 +74,6 @@ Metal-Shows/
     └── public/             # Static assets
 ```
 
-## Author
-
-[Gavri8827](https://github.com/Gavri8827)
-
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
