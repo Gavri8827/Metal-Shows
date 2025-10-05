@@ -20,7 +20,7 @@ https://gavri8827.github.io/Metal-Shows
 
 - **Frontend**: React, React Router, CSS
 - **Backend**: Spring Boot, REST API, JPA
-- **Database**: MySQL
+- **Database**: Sqlite
 - **Deployment**: GitHub Pages (Frontend)
 
 ## Installation
@@ -40,11 +40,7 @@ Make sure you have the following installed:
    cd Metal-Shows
    ```
 
-2. Configure the database:
-   - Update the `application.properties` file with your MySQL database configuration
-   - Location: `backend/src/main/resources/application.properties`
-
-3. Run the Backend (Spring Boot):
+2. Run the Backend (Spring Boot):
    - Navigate to: `backend/src/main/java/com/.../BackendMetalShowsApplication`
    - Run the application
    - The API will be available at: http://localhost:8081/api
