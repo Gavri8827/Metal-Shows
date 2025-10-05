@@ -1,0 +1,200 @@
+/* 🎯 קונטיינר של טווח תאריכים */
+.date-box {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* עטיפה של כל פיקר */
+.date-box .date-field {
+  position: relative;
+  z-index: inherit;
+}
+
+/* שדות קלט */
+.date-box input {
+  min-width: 160px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+/* בפוקוס */
+.date-box input:focus {
+  outline: none !important;
+  box-shadow: 0 0 8px rgba(224, 163, 255, 0.6);
+}
+
+/* 🎨 react-datepicker - הלוח עצמו */
+.date-box .react-datepicker {
+  background: #1a1a1a !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+  color: #fff !important;
+  font-family: inherit;
+}
+
+/* כותרת חודש */
+.date-box .react-datepicker__header {
+  background: #1a1a1a !important;
+  border-bottom: none !important;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 8px 0;
+}
+
+/* שם חודש */
+.date-box .react-datepicker__current-month {
+  font-size: 1rem !important;
+  font-weight: 600;
+  color: #ff69b4 !important;
+}
+
+/* 🎯 חיצים תקינים עם עיצוב ורוד */
+.date-box .react-datepicker__navigation {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  z-index: 10 !important;
+  opacity: 1 !important;
+}
+
+/* כאן הבעיה – זה היה מצייר את היהלומים */
+.date-box .react-datepicker__navigation-icon::before {
+  border-color: #ff69b4 !important;
+  border-style: solid;
+  border-width: 2px 2px 0 0; /* 👈 זו הצורה של חץ */
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+
+/* שמאלה */
+.date-box .react-datepicker__navigation--previous .react-datepicker__navigation-icon::before {
+  transform: rotate(-135deg);
+}
+
+/* ימינה */
+.date-box .react-datepicker__navigation--next .react-datepicker__navigation-icon::before {
+  transform: rotate(45deg);
+}
+
+/* אפקט hover */
+.date-box .react-datepicker__navigation:hover .react-datepicker__navigation-icon::before {
+  border-color: #e0a3ff !important;
+}
+
+
+/* שמות ימים */
+.date-box .react-datepicker__day-name {
+  color: #e0a3ff !important;
+  font-weight: 600;
+}
+
+/* ימים רגילים */
+.date-box .react-datepicker__day {
+  color: #fff !important;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+/* סוף שבוע */
+.date-box .react-datepicker__day--weekend {
+  color: #ff69b4 !important;
+}
+
+/* יום נבחר */
+.date-box .react-datepicker__day--selected,
+.date-box .react-datepicker__day--keyboard-selected {
+  background: #ff69b4 !important;
+  color: #000 !important;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* ימים בטווח */
+.date-box .react-datepicker__day--in-range,
+.date-box .react-datepicker__day--in-selecting-range {
+  background: rgba(255, 105, 180, 0.5) !important;
+  color: #fff !important;
+  border-radius: 0;
+}
+.date-box .react-datepicker__day--range-start {
+  background: #ff69b4 !important;
+  color: #000 !important;
+  border-radius: 6px 0 0 6px !important;
+}
+.date-box .react-datepicker__day--range-end {
+  background: #ff69b4 !important;
+  color: #000 !important;
+  border-radius: 0 6px 6px 0 !important;
+}
+.date-box .react-datepicker__day--range-start.react-datepicker__day--range-end {
+  border-radius: 6px !important;
+}
+
+/* Hover */
+.date-box .react-datepicker__day:hover {
+  background: linear-gradient(135deg, #ff69b4, #e0a3ff) !important;
+  color: #000 !important;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* מחוץ לחודש / disabled */
+.date-box .react-datepicker__day--outside-month {
+  color: #666 !important;
+}
+.date-box .react-datepicker__day--disabled {
+  color: #444 !important;
+  cursor: not-allowed;
+}
+
+/* החץ הקטן */
+.date-box .react-datepicker__triangle {
+  display: none;
+}
+
+/* 🔥 זה הקטע הקריטי - הפופר עצמו */
+.react-datepicker-popper {
+  z-index: 999999 !important;
+  position: absolute !important;
+  will-change: transform;
+}
+
+.datebox-popper-top {
+  z-index: 999999 !important;
+  position: absolute !important;
+  will-change: transform;
+}
+
+/* מיקום הפופר */
+.react-datepicker-popper[data-placement^="top"],
+.datebox-popper-top[data-placement^="top"] {
+  transform: translateY(-8px) !important;
+}
+
+.react-datepicker-popper[data-placement^="bottom"],
+.datebox-popper-top[data-placement^="bottom"] {
+  transform: translateY(8px) !important;
+}
+
+/* הלוח עצמו */
+.react-datepicker-popper .react-datepicker,
+.datebox-popper-top .react-datepicker {
+  z-index: 999999 !important;
+  position: relative;
+}

@@ -37,6 +37,7 @@ public class ShowController {
                                                 s.getTicketPrice(),
                                                 s.getPicture(),
                                                 s.getHall() != null ? s.getHall().getHallId() : null,
+                                                s.getHall() != null ? s.getHall().getHallName() : null,
                                                 s.getHall() != null ? s.getHall().getCity() : null,
                                                 s.getHall() != null ? s.getHall().getCountry() : null,
                                                 s.getHall() != null ? s.getHall().getStreet() : null))

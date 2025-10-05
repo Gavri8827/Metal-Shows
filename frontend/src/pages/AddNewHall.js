@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/AddNewHall.css';
+import Modal from '../components/Modal';
 
 export default function AddNewHall() {
   const [form, setForm] = useState({
@@ -60,7 +61,7 @@ export default function AddNewHall() {
 
   const fields = [
     { label: 'Hall name', name: 'hallName', type: 'text' },
-    { label: 'Country', name: 'country', type: 'select' },
+    { label: 'Location', name: 'country', type: 'select' },
     { label: 'City', name: 'city', type: 'text' },
     { label: 'Street', name: 'street', type: 'text' },
     { label: 'Rows number', name: 'rowsNum', type: 'number' },
@@ -70,8 +71,7 @@ export default function AddNewHall() {
   return (
     <div className="add-hall-container">
       <h1>Add New Hall</h1>
-      {message && <p className="message">{message}</p>}
-
+      
       <form className="add-hall-form" onSubmit={handleSubmit}>
         {fields.map(({ label, name, type }) => (
           <div key={name}>
@@ -85,7 +85,7 @@ export default function AddNewHall() {
                 onChange={handleChange}
                 required
               >
-                <option value="">Select Country</option>
+                <option value="">Select</option>
                 <option value="Israel">Israel</option>
                 <option value="USA">USA</option>
                 <option value="Europe">Europe</option>
@@ -98,12 +98,14 @@ export default function AddNewHall() {
                 value={form[name]}
                 onChange={handleChange}
                 required
+                {...(type === "number" ? { min: 0, onKeyDown: (e) => e.key === '-' && e.preventDefault() } : {})}
               />
             )}
           </div>
         ))}
 
         <button type="submit">Add Hall</button>
+         <Modal message={message} onClose={() => setMessage('')} />
       </form>
     </div>
   );

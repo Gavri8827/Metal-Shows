@@ -1,0 +1,149 @@
+/* 🎯 קונטיינר של תאריך יחיד */
+.single-date-box {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+}
+
+/* שדה קלט */
+.single-date-box input {
+  min-width: 170px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  border: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.single-date-box input:focus {
+  outline: none !important;
+  box-shadow: 0 0 8px rgba(224, 163, 255, 0.6);
+}
+
+/* עטיפה של כל פיקר */
+.single-date-box.data-field{
+  position: relative;
+  z-index: inherit;
+}
+
+/* 🎨 לוח השנה */
+.single-date-box .react-datepicker {
+  background: #1a1a1a !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+  color: #fff !important;
+  font-family: inherit;
+}
+
+
+/* כותרת חודש */
+.single-date-box .react-datepicker__header {
+  background: #1a1a1a !important;
+  border-bottom: none !important;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 8px 0;
+}
+
+/* שם חודש */
+.single-date-box .react-datepicker__current-month {
+  font-size: 1rem !important;
+  font-weight: 600;
+  color: #ff69b4 !important;
+}
+
+
+
+/* 🎯 חיצים בלוח השנה (עבור SingleDateBox) */
+.single-date-box .react-datepicker__navigation {
+  
+  background: none !important;
+  border: none !important;
+  width: 22px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* חץ שמאלי (חודש קודם) */
+.single-date-box .react-datepicker__navigation-icon::before {
+  border-color: #ff69b4 !important;
+}
+.single-date-box.react-datepicker__navigation:hover *::before {
+  border-color: #e0a3ff !important;
+}
+
+/* Hover effect */
+.single-date-box .react-datepicker__navigation:hover .react-datepicker__navigation-icon::before {
+  border-color: #e0a3ff !important;
+}
+
+
+/* שמות ימים */
+.single-date-box .react-datepicker__day-name {
+  color: #e0a3ff !important;
+  font-weight: 600;
+}
+
+/* ימים רגילים */
+.single-date-box .react-datepicker__day {
+  color: #fff !important;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* סופי שבוע */
+.single-date-box .react-datepicker__day--weekend {
+  color: #ff69b4 !important;
+}
+
+/* יום נבחר */
+.single-date-box .react-datepicker__day--selected,
+.single-date-box .react-datepicker__day--keyboard-selected {
+  background: linear-gradient(135deg, #ff69b4, #ff00c8) !important;
+  color: #000 !important;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+}
+
+/* Hover על יום */
+.single-date-box .react-datepicker__day:hover {
+  background: linear-gradient(135deg, #ff69b4, #e0a3ff) !important;
+  color: #000 !important;
+  border-radius: 6px;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+/* ימים מחוץ לחודש */
+.single-date-box .react-datepicker__day--outside-month {
+  color: #666 !important;
+}
+
+/* ימים מנוטרלים */
+.single-date-box .react-datepicker__day--disabled {
+  color: #444 !important;
+  cursor: not-allowed;
+}
+
+/* הסתרת החץ הקטן */
+.single-date-box .react-datepicker__triangle {
+  display: none !important;
+}
+
+/* מיקום הפופאפ */
+.single-date-box .react-datepicker-popper {
+  z-index: 9999 !important;
+  transform: translateY(8px) !important;
+}
+

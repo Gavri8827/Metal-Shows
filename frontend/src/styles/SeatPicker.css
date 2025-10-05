@@ -1,52 +1,75 @@
+/* 🎟️ מבנה רשת המושבים */
 .seat-grid {
-  display: grid;
-  gap: 6px;
-  justify-content: center;
-  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: auto; /* מאפשר גם גלילה שמאלה וימינה */
+  max-width: 100%;
+  max-height: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(30, 0, 50, 0.5);
 }
 
+/* כל שורה */
+.seat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  white-space: nowrap; /* כדי שלא יעבור שורה */
+}
+
+/* מספר שורה משמאל */
+.row-label {
+  width: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+  text-align: right;
+  color: #d3b3ff;
+  text-shadow: 0 0 6px rgba(200, 120, 255, 0.6);
+}
+
+/* כיסא */
 .seat {
-  width: 40px;
-  height: 40px;
-  background: lightgray;
+  background: rgb(135, 133, 133);
   border: 1px solid #444;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin: 2px;
+  transition: 0.2s;
 }
 
-.seat-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
+/* 👇 גודל דינמי — קטן יותר כשיש הרבה שורות */
+.seat {
+  width: clamp(20px, 3vw, 40px);
+  height: clamp(20px, 3vw, 40px);
 }
 
-.row-label {
-  width: 30px;
-  font-weight: bold;
-  margin-right: 10px;
-  text-align: right;
-}
-
-
+/* מושבים תפוסים */
 .seat.reserved {
   background: red;
   cursor: not-allowed;
 }
 
+/* מושבים שנבחרו */
 .seat.selected {
   background: green;
   color: white;
   font-weight: bold;
 }
 
+/* מקרא */
 .legend {
-  margin: 10px 0;
+  margin: 15px 0;
   display: flex;
-  gap: 15px;
+  gap: 25px;
   justify-content: center;
+  color: #d3b3ff;
+  font-weight: 600;
 }
 
 .dot {
@@ -57,16 +80,48 @@
   margin-right: 5px;
 }
 
-.dot.available { background: lightgray; }
-.dot.reserved { background: red; }
-.dot.selected { background: green; }
+.dot.available {
+  background: #bcbcbc;
+}
 
+.dot.taken {
+  background: red;
+}
+
+.dot.selected {
+  background: limegreen;
+}
+
+/* שלט הבמה */
 .stage {
   text-align: center;
   margin: 15px auto;
   font-weight: bold;
-  padding: 5px;
-  background: #eee;
-  width: 120px;
-  border-radius: 6px;
+  padding: 6px 12px;
+  background: linear-gradient(90deg, #b77eff, #ff77d4);
+  width: fit-content;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(200, 120, 255, 0.7);
+}
+
+/* ✨ פס גלילה סגול */
+.seat-grid::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.seat-grid::-webkit-scrollbar-track {
+  background: #1a0029;
+  border-radius: 10px;
+}
+
+.seat-grid::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #b77eff, #ff77d4);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 120, 255, 0.6);
+}
+
+.seat-grid::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #d28eff, #ff8ce4);
 }

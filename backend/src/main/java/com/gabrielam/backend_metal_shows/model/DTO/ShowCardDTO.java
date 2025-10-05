@@ -9,6 +9,7 @@ public record ShowCardDTO(
         Integer ticketPrice,
         String picture,
         Integer hallId,
+        String hallName, 
         String city,
         String country,
         String street

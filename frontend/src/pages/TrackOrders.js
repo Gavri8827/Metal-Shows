@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/TrackOrders.css';
 
 export default function TrackOrders() {
@@ -16,16 +16,17 @@ export default function TrackOrders() {
 
   return (
     <div className="track-orders-container">
-      <h1>Recent reservations:</h1>
+      <h1>Recent reservations</h1>
 
       <table className="reservations-table">
         <thead>
           <tr>
             <th>Reservation id</th>
             <th>Show</th>
-            <th>Name</th>
+            <th>Private Name</th>
             <th>Family Name</th>
-            <th>Date</th>
+            <th>Mail</th>
+            <th>Reservation Date</th>
             <th>Number of Tickets</th>
             <th>Price</th>
           </tr>
@@ -39,14 +40,13 @@ export default function TrackOrders() {
                 <td>{r.bandName}</td>
                 <td>{r.privateName}</td>
                 <td>{r.familyName}</td>
+                <td>{r.mail}</td>
                 <td>{new Date(r.resDate).toLocaleDateString()}</td>
                 <td>{r.seatsCount}</td>
                 <td>
-                  <td>
-                    {r.ticketPrice && r.seatsCount
-                      ? `${r.ticketPrice * r.seatsCount} ILS`
-                      : "-"}
-                  </td>
+                  {r.ticketPrice && r.seatsCount
+                    ? `${r.ticketPrice * r.seatsCount} ILS`
+                    : "-"}
 
                 </td>
               </tr>

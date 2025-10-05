@@ -1,7 +1,7 @@
 import '../styles/ShowCard.css';
 import { useNavigate } from "react-router-dom"; // 👈 הוסיפי את זה
 
-function ShowCard({ showId, bandName, showDate, ticketPrice, picture, city, country, street }) {
+function ShowCard({ showId,hallName,bandName, showDate, ticketPrice, picture, city, country, street }) {
 
   const navigate = useNavigate(); // 👈 יוצר פונקציית ניווט
 
@@ -11,6 +11,7 @@ function ShowCard({ showId, bandName, showDate, ticketPrice, picture, city, coun
       <div className="show-details">
         <p className="show-band">{bandName}</p>
         <p className="show-date"><label>Date: </label>{showDate}</p>
+        <p className="show-hall"><label>Hall: </label>{hallName || "Unknown Hall"}</p>
         <p className="show-location">
           <label>Location: </label>
           {city && country && street ? `${country}, ${city}, ${street}` : "Unknown"}

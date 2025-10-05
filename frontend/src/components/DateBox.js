@@ -1,11 +1,12 @@
-import React from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "../styles/DateBox.css";
 
-const DateBox = ({ startDate, endDate, setStartDate, setEndDate, onApply }) => {
+const DateBox = ({ startDate, endDate, setStartDate, setEndDate }) => {
   return (
     <div className="date-box">
-      <div>
+      {/* תאריך התחלה */}
+      <div className="date-field">
         <label>From: </label>
         <DatePicker
           selected={startDate}
@@ -15,10 +16,14 @@ const DateBox = ({ startDate, endDate, setStartDate, setEndDate, onApply }) => {
           endDate={endDate}
           placeholderText="Select start date"
           dateFormat="yyyy-MM-dd"
+          popperPlacement="bottom-start"
+          popperClassName="datebox-popper-top"
+          shouldCloseOnSelect
         />
       </div>
 
-      <div>
+      {/* תאריך סיום */}
+      <div className="date-field">
         <label>Until: </label>
         <DatePicker
           selected={endDate}
@@ -29,12 +34,12 @@ const DateBox = ({ startDate, endDate, setStartDate, setEndDate, onApply }) => {
           minDate={startDate}
           placeholderText="Select end date"
           dateFormat="yyyy-MM-dd"
+          popperPlacement="top-start"
+          popperClassName="datebox-popper-top"
+          shouldCloseOnSelect
+
         />
       </div>
-
-      <button className="apply-dates" onClick={onApply}>
-        Apply Dates
-      </button>
     </div>
   );
 };
