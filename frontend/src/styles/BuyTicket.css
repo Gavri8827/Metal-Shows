@@ -1,0 +1,228 @@
+.buy-ticket-container {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: radial-gradient(circle at top left, #19002e, #0d001a);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #ff7de9, #b57dff, #6fd5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 25px rgba(255, 0, 255, 0.5);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* HEADER BAR */
+.header-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(50, 0, 80, 0.6);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(200, 100, 255, 0.3);
+  margin-bottom: 30px;
+}
+
+/* תמונת הלהקה מתחת לכפתורים */
+.band-img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(250, 160, 255, 0.6);
+  margin-bottom: 20px; /* ← רווח בין התמונה לכפתורים */
+}
+
+/* כפתורים מתחת לתמונה */
+.show-info {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;   /* ← מוסיף רווח מעליהם, שיהיו רחוקים מהתמונה */
+}
+
+.show-info button {
+  background: linear-gradient(90deg, #b77eff, #ff77d4);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.show-info button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ffb3f6;
+}
+
+
+/* החלק הראשי */
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* מסגרת המושבים */
+.seats-section {
+  flex: 1;
+  background: rgba(25, 0, 40, 0.8);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(180, 100, 255, 0.2);
+  overflow: auto;
+  max-width: 600px;
+  max-height: 500px;
+}
+
+.section-title {
+  color: #c084f5;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* צבעים סגולים */
+.legend span {
+  color: #b985f6;
+  font-weight: 600;
+}
+
+/* מסגרת טופס */
+/* הקטנת רוחב המסגרת של הטופס */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: rgba(40, 0, 70, 0.5);
+  border: 1px solid rgba(180, 100, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(160, 80, 255, 0.3);
+  padding: 25px;
+  width: 40%; /* 👈 במקום 100% או auto */
+  min-width: 320px;
+  max-width: 400px; /* 👈 לא יחרוג גם במסכים רחבים */
+  overflow: hidden;
+}
+
+/* טופס */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form label {
+  font-weight: 600;
+  color: #e0baff;
+}
+
+form input {
+  background: #0e0016;
+  color: white;
+  border: 1px solid #a14fff;
+  border-radius: 8px;
+  padding: 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 5px rgba(150, 0, 255, 0.3);
+}
+
+form input:focus {
+  outline: none;
+  box-shadow: 0 0 15px #a14fff;
+}
+
+form button {
+  background: linear-gradient(90deg, #c17dff, #ff77d4);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffb3f6;
+}
+
+/* STAGE */
+.stage {
+  background: #2a0040;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 20px auto;
+  width: fit-content;
+  box-shadow: 0 0 10px rgba(180, 100, 255, 0.5);
+}
+
+/* LEGEND */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* טקסט של Selected seats */
+.selected-seats-text {
+  color: #c98fff;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(180, 80, 255, 0.5);
+  text-align: center;
+}
+
+/* LEGEND */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+  color: #d3aaff;
+  font-weight: 500;
+}
+
+.legend .dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 6px;
+  box-shadow: 0 0 10px rgba(200, 120, 255, 0.6);
+}
+
+.dot.available {
+  background-color: rgb(135, 133, 133);
+}
+
+.dot.taken {
+  background-color: red;
+}
+
+.dot.selected {
+  background-color: #2fff62;
+}
+

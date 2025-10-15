@@ -1,0 +1,87 @@
+.add-show-container {
+  display: flex;
+  flex-direction: column; /* כותרת מעל הטופס */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a, #1a0b2e, #000);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  text-align: center;
+}
+
+.add-show-container h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #b388ff;
+}
+
+.add-show-form {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(30, 30, 30, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  border: 1px solid rgba(224, 163, 255, 0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease;
+  text-align: left; /* כדי שהטקסט של הלייבלים לא יישאר באמצע */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.add-show-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.add-show-form input,
+.add-show-form select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border: 1px solid rgba(224, 163, 255, 0.3);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.add-show-form input:focus,
+.add-show-form select:focus {
+  outline: none;
+  border-color: #b388ff;
+  box-shadow: 0 0 10px rgba(179, 136, 255, 0.5);
+}
+
+.add-show-form button {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e0a3ff, #b388ff);
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-show-form button:hover {
+  background: #7e57c2;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(126, 87, 194, 0.6);
+}
+

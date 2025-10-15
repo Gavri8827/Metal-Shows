@@ -1,0 +1,69 @@
+/* Header */
+header {
+  background: rgba(31, 31, 31, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 15px 40px;
+  border-bottom: 1px solid rgba(224, 163, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 👈 כמו ב-HomePageContainer */
+}
+
+/* Nav container */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Links as buttons with border */
+nav a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 2px solid rgba(224, 163, 255, 0.6); /* מסגרת */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 👈 מפורש גם כאן */
+}
+
+/* Hover effect: text becomes darker purple */
+nav a:hover {
+  color: #a64ed6; /* סגול כהה יותר */
+  border-color: #a64ed6;
+  text-shadow: 0 0 6px rgba(166, 78, 214, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Active link */
+nav a.active {
+  color: #ff69b4;
+  border-color: #ff69b4;
+  font-weight: 600;
+}
+
+.logout-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e0a3ff, #ff69b4);
+  color: #000;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logout-btn:hover {
+  background:  #df159f;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(224, 163, 255, 0.4);
+}

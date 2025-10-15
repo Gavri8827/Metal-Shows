@@ -1,0 +1,215 @@
+/* רקע כללי */
+.HomePageContainer {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #0a0a0a, #1a0b2e, #000);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  z-index: 0;
+  overflow: visible !important;
+}
+
+/* כותרת */
+.HomePageContainer h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #e0a3ff, #ff69b4, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 4s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes glowText {
+  0%, 100% { text-shadow: 0 0 10px #e0a3ff; }
+  50% { text-shadow: 0 0 20px #ff69b4; }
+}
+
+/* שורת הפילטרים - מכילה את כל המסגרות */
+.filters-row {
+  display: grid;
+  grid-template-columns: repeat(3, auto) 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* מסגרת כללית לכל box */
+.filter-box {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* מסגרת חיפוש */
+.search-box-wrapper {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+/* מסגרת מיקום */
+.location-box-wrapper {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+/* מסגרת תאריכים */
+.date-box-wrapper {
+  flex: 0 0 auto;
+  width: auto;
+  z-index: 10;
+  overflow: visible !important;
+}
+
+/* כפתור ללא מסגרת - בצד שמאל */
+.clear-filters-standalone {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #e0a3ff, #ff69b4);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  justify-self: start;
+  margin-right: auto;
+}
+
+.clear-filters-standalone:hover {
+  background: #df159f;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(224, 163, 255, 0.5);
+}
+
+/* קופסת תאריכים - בשורה אחת */
+.date-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 10;
+}
+
+.date-box .date-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.date-box label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0a3ff;
+  white-space: nowrap;
+}
+
+/* תווית LOCATION כמו FROM */
+.location-box-wrapper label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0a3ff;
+  white-space: nowrap;
+  margin-right: 8px;
+}
+
+
+/* עיצוב לשדות הקלט בתוך המסגרות - אורך קבוע */
+.search-box-wrapper input,
+.location-box-wrapper select,
+.date-box input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(224, 163, 255, 0.3);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 0.9rem;
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+  transition: all 0.3s ease;
+}
+
+.search-box-wrapper input:focus,
+.location-box-wrapper select:focus,
+.date-box input:focus {
+  outline: none;
+  border-color: #e0a3ff;
+  box-shadow: 0 0 12px rgba(224, 163, 255, 0.6);
+}
+
+/* גריד הופעות */
+.shows-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  justify-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* הודעה כשהרשימה ריקה */
+.shows-list p {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .filters-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .search-box-wrapper,
+  .location-box-wrapper,
+  .date-box-wrapper {
+    width: 100%;
+  }
+
+  .search-box-wrapper input,
+  .location-box-wrapper select,
+  .date-box input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .clear-filters-standalone {
+    width: 100%;
+  }
+
+  .date-box {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .date-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .date-box .date-field {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

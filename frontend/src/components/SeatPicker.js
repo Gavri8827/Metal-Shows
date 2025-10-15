@@ -1,0 +1,105 @@
+import React, { useState } from "react";
+import "../styles/SeatPicker.css";
+
+const SeatPicker = ({ showData, onSelect }) => {
+  const [selectedSeats, setSelectedSeats] = useState([]);
+  const { rowsNum, seatsPerRow, reservedSeats } = showData;
+
+
+  // בניית כל המושבים לפי rowsNum + seats_per_row
+  const generateSeats = () => {
+    const seats = [];
+    for (let row = 1; row <= rowsNum; row++) {
+      for (let col = 1; col <= seatsPerRow; col++) {
+        const isReserved = reservedSeats.some(
+          (s) => s.rowNum === row && s.chairNum === col
+        );
+        seats.push({
+          id: `${row}-${col}`,
+          row,
+          col,
+          reserved: isReserved,
+        });
+      }
+    }
+
+    return seats;
+  };
+
+  const allSeats = generateSeats();
+  console.log(allSeats)
+
+  const handleClick = (seat) => {
+    if (seat.reserved) return;
+
+    const isSelected = selectedSeats.some(
+      (s) => s.row === seat.row && s.col === seat.col
+    );
+
+    let updated;
+    if (isSelected) {
+      updated = selectedSeats.filter(
+        (s) => !(s.row === seat.row && s.col === seat.col)
+      );
+    } else {
+      updated = [...selectedSeats, seat];
+    }
+
+    setSelectedSeats(updated);
+    onSelect(updated);
+  };
+
+  const seatSize = Math.max(
+    20, // גודל מינימלי
+    Math.min(45, 600 / Math.max(rowsNum, seatsPerRow)) // מחשב גודל לפי גודל האולם
+  );
+
+  return (
+    <div>
+
+      <div className="seat-grid">
+        {Array.from({ length: rowsNum }, (_, rowIndex) => {
+          const row = rowIndex + 1;
+          return (
+            <div key={row} className="seat-row">
+              <span className="row-label">{row}</span>
+              {Array.from({ length: seatsPerRow }, (_, colIndex) => {
+                const col = colIndex + 1;
+                const isReserved = reservedSeats.some(
+                  (s) => s.rowNum === row && s.chairNum === col
+                );
+                const seat = {
+                  id: `${row}-${col}`,
+                  row,
+                  col,
+                  reserved: isReserved,
+                };
+                return (
+                  <div
+                    key={seat.id}
+                    className={`seat ${seat.reserved ? "reserved" : ""} ${selectedSeats.some(
+                      (s) => s.row === seat.row && s.col === seat.col
+                    )
+                      ? "selected"
+                      : ""
+                      }`}
+                    onClick={() => handleClick(seat)}
+                    style={{
+                      width: `${seatSize}px`,
+                      height: `${seatSize}px`,
+                      fontSize: `${seatSize * 0.4}px`,
+                    }}
+                  >
+                    {col}
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default SeatPicker;

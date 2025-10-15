@@ -1,0 +1,74 @@
+.track-orders-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0a0a0a, #1a0b2e, #000);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* כותרת ראשית */
+.track-orders-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #e0a3ff, #ff69b4, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 4s ease-in-out infinite;
+}
+
+/* טבלה */
+.reservations-table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  text-align: center;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+/* כותרות טבלה */
+.reservations-table thead {
+  background-color: #4a148c; /* סגול כהה יותר */
+  color: #fff;
+}
+
+.reservations-table th,
+.reservations-table td {
+  padding: 14px;
+  border: 1px solid rgba(224, 163, 255, 0.3); /* גבולות עמודות ושורות */
+  color: #ddd;
+}
+
+/* שורות גוף */
+.reservations-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.reservations-table tbody tr:hover {
+  background: rgba(179, 136, 255, 0.15);
+  transition: background 0.3s ease;
+}
+
+/* טקסט שאין נתונים */
+.reservations-table .no-data {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* הדגשת מחיר */
+.reservations-table td.price {
+  font-weight: bold;
+  color: #81c784;
+}
+
+.reservations-table td.price::before {
+  content: "₪ ";
+  font-weight: normal;
+  color: #ccc;
+}

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Metal-Shows/static/css/main.f2799d7f.css",
+    "main.js": "/Metal-Shows/static/js/main.b0da166b.js",
+    "index.html": "/Metal-Shows/index.html",
+    "main.f2799d7f.css.map": "/Metal-Shows/static/css/main.f2799d7f.css.map",
+    "main.b0da166b.js.map": "/Metal-Shows/static/js/main.b0da166b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2799d7f.css",
+    "static/js/main.b0da166b.js"
+  ]
+}
